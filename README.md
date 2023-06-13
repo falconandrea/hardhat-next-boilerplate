@@ -12,6 +12,9 @@ npx hardhat compile
 # Launch tests
 npx hardhat test
 
+# Run script deploy
+npx hardhat run scripts/deploy.js --network goerli
+
 # Use frontend in local
 npm run dev
 ```

@@ -7,7 +7,7 @@
 const hre = require("hardhat");
 
 async function main() {
-  const simpleNFT = await hre.ethers.deployContract("simpleNFT");
+  const simpleNFT = await hre.ethers.deployContract("SimpleNFT");
 
   await simpleNFT.waitForDeployment();
 
