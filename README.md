@@ -1,13 +1,17 @@
-# Sample Hardhat Project
+# Hardhat + Next Boilerplate
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
+I created this simple Boilerplate with Hardhat + NextJS for doing my exercises and tutorials.
 
 ```shell
-npx hardhat help
+# Install packages
+npm install
+
+# Compile contracts
+npx hardhat compile
+
+# Launch tests
 npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+
+# Use frontend in local
+npm run dev
 ```
