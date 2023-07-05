@@ -1,3 +1,7 @@
+<a href="https://trackgit.com">
+<img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/ljpttoh8nm033ssn8qbl" alt="trackgit-views" />
+</a>
+
 # Hardhat + Next Boilerplate
 
 I created this simple Boilerplate with Hardhat + NextJS for doing my exercises and tutorials.
