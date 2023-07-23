@@ -2,13 +2,26 @@ require("@nomicfoundation/hardhat-toolbox")
 require('dotenv').config()
 
 /** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
+
+const config = {
   solidity: "0.8.18",
-  networks: {
-    // Change if you need
-    goerli: {
-      url: process.env.URL_PROVIDER,
-      accounts: [process.env.PRIVATE_KEY]
-    }
-  }
-};
+  networks: {}
+}
+
+// Check network to use
+if(process.env.GOERLI_URL_PROVIDER && process.env.GOERLI_URL_PROVIDER != '') config.network.goerli = {
+  url: process.env.GOERLI_URL_PROVIDER,
+  accounts: [process.env.PRIVATE_KEY]
+}
+if(process.env.SEPOLIA_URL_PROVIDER && process.env.SEPOLIA_URL_PROVIDER != '') config.network.sepolia = {
+  url: process.env.SEPOLIA_URL_PROVIDER,
+  accounts: [process.env.PRIVATE_KEY]
+}
+if(process.env.MAINNET_URL_PROVIDER && process.env.MAINNET_URL_PROVIDER != '') config.network.mainnet = {
+  url: process.env.MAINNET_URL_PROVIDER,
+}
+
+// Etherscan apikey
+if(process.env.ETHERSCAN_API_KEY && process.env.ETHERSCAN_API_KEY) config.etherscan.apiKey = process.env.ETHERSCAN_API_KEY
+
+module.exports = config;
