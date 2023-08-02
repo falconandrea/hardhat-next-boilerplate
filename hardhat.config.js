@@ -22,6 +22,9 @@ if(process.env.MAINNET_URL_PROVIDER && process.env.MAINNET_URL_PROVIDER != '') c
 }
 
 // Etherscan apikey
-if(process.env.ETHERSCAN_API_KEY && process.env.ETHERSCAN_API_KEY) config.etherscan.apiKey = process.env.ETHERSCAN_API_KEY
+if(process.env.ETHERSCAN_API_KEY && process.env.ETHERSCAN_API_KEY) {
+  config.etherscan = {}
+  config.etherscan.apiKey = process.env.ETHERSCAN_API_KEY
+}
 
 module.exports = config;
