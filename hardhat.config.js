@@ -9,15 +9,15 @@ const config = {
 }
 
 // Check network to use
-if(process.env.GOERLI_URL_PROVIDER && process.env.GOERLI_URL_PROVIDER != '') config.network.goerli = {
+if(process.env.GOERLI_URL_PROVIDER && process.env.GOERLI_URL_PROVIDER != '') config.networks.goerli = {
   url: process.env.GOERLI_URL_PROVIDER,
   accounts: [process.env.PRIVATE_KEY]
 }
-if(process.env.SEPOLIA_URL_PROVIDER && process.env.SEPOLIA_URL_PROVIDER != '') config.network.sepolia = {
+if(process.env.SEPOLIA_URL_PROVIDER && process.env.SEPOLIA_URL_PROVIDER != '') config.networks.sepolia = {
   url: process.env.SEPOLIA_URL_PROVIDER,
   accounts: [process.env.PRIVATE_KEY]
 }
-if(process.env.MAINNET_URL_PROVIDER && process.env.MAINNET_URL_PROVIDER != '') config.network.mainnet = {
+if(process.env.MAINNET_URL_PROVIDER && process.env.MAINNET_URL_PROVIDER != '') config.networks.mainnet = {
   url: process.env.MAINNET_URL_PROVIDER,
 }
 
